@@ -24,4 +24,4 @@ const Emotion = sequelize.define('Emotion', {
   },
 });
 
-module.exports = Emotion;
+module.exports = Emotion
