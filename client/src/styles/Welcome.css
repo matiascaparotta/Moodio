@@ -1,0 +1,40 @@
+.welcome-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #f4f0fa 0%, #fcefee 100%);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .welcome-title {
+    font-size: 2.5rem;
+    color: #ff8b94;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .welcome-button {
+    background-color: #ff8b94;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s;
+  }
+  
+  .welcome-button:hover {
+    background-color: #e66a76;
+  }
