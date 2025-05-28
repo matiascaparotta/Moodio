@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Emotion = require('../models/Emotion');
+const verifyToken = require('../middlewares/verifyToken');
 
-// GET todas las emociones
+// Obtener todas las emociones (público)
 router.get('/', async (req, res) => {
   try {
     const emotions = await Emotion.findAll({ order: [['timestamp', 'DESC']] });
@@ -13,18 +14,35 @@ router.get('/', async (req, res) => {
   }
 });
 
-// POST nueva emoción
-router.post('/', async (req, res) => {
+// Crear nueva emoción (requiere autenticación)
+router.post('/', verifyToken, async (req, res) => {
   const { message, feeling } = req.body;
   try {
-    const emotion = await Emotion.create({ message, feeling });
+    const emotion = await Emotion.create({
+      message,
+      feeling,
+      userId: req.user.id, // ✅ usuario autenticado
+    });
     res.status(201).json(emotion);
   } catch (err) {
     res.status(500).json({ error: 'Error al guardar emoción' });
   }
 });
 
-// PATCH para reaccionar
+// Obtener emociones del usuario autenticado
+router.get('/mine', verifyToken, async (req, res) => {
+  try {
+    const emotions = await Emotion.findAll({
+      where: { userId: req.user.id },
+      order: [['timestamp', 'DESC']],
+    });
+    res.json(emotions);
+  } catch (err) {
+    res.status(500).json({ error: 'Error al obtener tus emociones' });
+  }
+});
+
+// Reaccionar a una emoción (support o seen)
 router.patch('/:id/react', async (req, res) => {
   const { type } = req.body;
   const { id } = req.params;

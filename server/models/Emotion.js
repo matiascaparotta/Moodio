@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
+const sequelize = require('../config/db'); // 👈 ESTA LÍNEA ES LA QUE FALTA O ESTÁ MAL
 
 const Emotion = sequelize.define('Emotion', {
   message: {
@@ -22,6 +22,10 @@ const Emotion = sequelize.define('Emotion', {
     type: DataTypes.INTEGER,
     defaultValue: 0,
   },
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 
-module.exports = Emotion
+module.exports = Emotion;
