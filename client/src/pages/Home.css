@@ -1,0 +1,45 @@
+/* Home.css */
+
+.homeContent-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.homeContent-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.homeContent-title {
+  font-size: 2.5rem;
+  color: #ff8b94;
+}
+
+.homeContent-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.homeContent-section {
+  margin-bottom: 3rem;
+}
+
+.homeContent-sectionTitle {
+  font-size: 1.5rem;
+  color: #6c5ce7;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.homeContent-divider {
+  margin: 3rem auto;
+  height: 2px;
+  background-color: #ffe0e5;
+  border: none;
+  width: 80%;
+}
