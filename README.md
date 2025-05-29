@@ -1,89 +1,102 @@
-# Moodio
 
-**Moodio** es una aplicación web para la expresión emocional anónima. Los usuarios pueden compartir cómo se sienten, ver las emociones de otros y reaccionar con empatía. El objetivo es crear una comunidad segura y compasiva para el desahogo emocional.
+# Moodio – App de Salud Emocional 🌱
 
-## 🧠 Funcionalidades actuales
+Moodio es una aplicación full stack diseñada para ayudar a los usuarios a expresar y reflexionar sobre sus emociones. Está pensada para un público joven, con una interfaz amigable, moderna y centrada en el bienestar emocional.
 
-- Formulario para ingresar una emoción con un mensaje y categoría (representada por un emoji).
-- Visualización de emociones en un feed ordenado por fecha.
-- Reacciones a emociones: "🤝 Apoyo" y "👁️ Visto".
-- Estilos empáticos y suaves con diseño responsive.
-- Navegación entre vistas: bienvenida, ingresar emoción, historial, herramientas futuras.
-- Backend conectado con base de datos MySQL usando Sequelize.
-
-## 📁 Estructura del proyecto
-
-```
-Moodio/
-├── client/                # Frontend React
-│   ├── src/
-│   │   ├── components/    # EmotionForm, EmotionFeed, Navbar
-│   │   ├── routes/        # Welcome, Home, MoodFeedPage, etc.
-│   │   ├── services/      # api.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── global.css     # Estilos globales
-│   └── public/
-├── server/                # Backend Node.js + Express
-│   ├── config/            # Base de datos (db.js)
-│   ├── models/            # Sequelize Models
-│   ├── routes/            # Rutas API (emotions.js)
-│   └── index.js           # Entrada principal del servidor
-├── .env                   # Variables de entorno (DB config)
-└── README.md              # Este archivo
-```
+---
 
 ## 🛠️ Tecnologías utilizadas
 
-- **Frontend:** React.js, CSS, React Router DOM
-- **Backend:** Node.js, Express.js, Sequelize
-- **Base de datos:** MySQL
-- **Dependencias útiles:** Axios, dotenv, nodemon
+- **Frontend:** React.js, React Router, CSS modular, diseño responsivo.
+- **Backend:** Node.js, Express.js, Sequelize, MySQL.
+- **Otros:** Multer (subida de imágenes), JSON Web Token (autenticación), Vite, Axios, Figma (diseño UI/UX).
 
-## 🌱 Futuro
+---
 
-- Autenticación de usuarios
-- Comentarios anónimos
-- Herramientas premium como estadísticas emocionales, audios guiados
-- Versión móvil con React Native
+## ✅ Funcionalidades principales
 
-## 🚀 Cómo ejecutar localmente
+### 🔐 Autenticación
+- Registro con email, contraseña y **foto obligatoria de perfil**.
+- Login seguro con almacenamiento del token.
+- Validaciones y manejo de errores claros para el usuario.
 
-1. Clonar el repositorio:
+### 👤 Perfil de usuario
+- Visualización de foto y datos.
+- Edición de nombre, apellido, usuario y año de nacimiento.
+- Botón para ir al historial de emociones.
+
+### 🧠 Registro emocional
+- Formulario para soltar emociones en texto libre.
+- Selección de emojis como representación de estado emocional.
+- Feed tipo red social con las emociones públicas de los demás.
+
+### 🛠️ Herramientas de apoyo (en progreso)
+- Audios de relajación, estadísticas, recursos premium.
+
+---
+
+## 🎨 Diseño visual
+- Inspirado en apps de bienestar (colores lavanda, coral, azul claro).
+- Tipografía suave (Poppins).
+- Interfaz minimalista, limpia y accesible.
+
+---
+
+## 🚀 Cómo correrlo localmente
+
+1. Clona el repositorio:
 ```bash
 git clone https://github.com/matiascaparotta/Moodio.git
+cd Moodio
 ```
 
-2. Instalar dependencias:
+2. Instala dependencias:
 ```bash
-cd Moodio/client
+cd client
 npm install
-
 cd ../server
 npm install
 ```
 
-3. Configurar `.env` en la carpeta `server`:
-```env
-DB_NAME=moodio_db
-DB_USER=root
-DB_PASS=tu_contraseña
-DB_HOST=localhost
+3. Crea el archivo `.env` en `/server` con:
+```
 PORT=3001
+JWT_SECRET=tu_clave_secreta
+DB_USER=root
+DB_PASSWORD=tu_contraseña
+DB_NAME=moodio_db
 ```
 
-4. Ejecutar el servidor:
+4. Inicia el backend y frontend:
 ```bash
 cd server
 node index.js
-```
-
-5. Ejecutar el frontend:
-```bash
+# En otra terminal:
 cd client
-npm start
+npm run dev
 ```
 
 ---
 
-*Actualizado:* 24/05/2025
+## 🧑‍💻 Autor
+
+**Matías Caparotta** – Desarrollador full stack con background en liderazgo en hospitalidad. En transición profesional hacia el desarrollo de productos tecnológicos con impacto humano.
+
+---
+
+## 📸 Capturas de pantalla (opcional)
+
+*Próximamente se pueden agregar para mostrar visualmente el perfil, feed y pantalla de registro.*
+
+---
+
+## 🌍 Estado actual del proyecto
+
+Esta rama contiene todos los últimos avances hasta el 2025:
+- ✅ Registro con imagen
+- ✅ Sección de perfil
+- ✅ Diseño visual consistente
+- ✅ Manejo de errores
+- ✅ Subida de imágenes al servidor
+- ✅ Conexión completa entre frontend y backend
+
