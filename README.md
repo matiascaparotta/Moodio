@@ -1,102 +1,85 @@
+# 💜 Moodio
 
-# Moodio – App de Salud Emocional 🌱
+**Moodio** es una aplicación web interactiva y empática enfocada en el bienestar emocional, diseñada para que los jóvenes puedan expresar sus emociones de forma segura, reflexiva y auténtica. 
 
-Moodio es una aplicación full stack diseñada para ayudar a los usuarios a expresar y reflexionar sobre sus emociones. Está pensada para un público joven, con una interfaz amigable, moderna y centrada en el bienestar emocional.
-
----
-
-## 🛠️ Tecnologías utilizadas
-
-- **Frontend:** React.js, React Router, CSS modular, diseño responsivo.
-- **Backend:** Node.js, Express.js, Sequelize, MySQL.
-- **Otros:** Multer (subida de imágenes), JSON Web Token (autenticación), Vite, Axios, Figma (diseño UI/UX).
+Construida con **React.js**, **Node.js**, **Express**, **MySQL** y **Sequelize**, esta app permite escribir emociones, mantener un historial personal y compartir sentimientos públicos con otros usuarios de forma anónima o identificada.
 
 ---
 
-## ✅ Funcionalidades principales
+## 🚀 Características principales
 
-### 🔐 Autenticación
-- Registro con email, contraseña y **foto obligatoria de perfil**.
-- Login seguro con almacenamiento del token.
-- Validaciones y manejo de errores claros para el usuario.
+### ✍️ Publicación de emociones
+- Etiqueta el sentimiento con emojis (`Triste`, `Feliz`, `Ansioso`, etc.).
+- Publicaciones pueden ser **públicas** o **privadas**.
+- Opción de publicar de forma **anónima** o con nombre de usuario.
+
+### 📖 Historial personal
+- Visualiza todas tus emociones escritas, tanto públicas como privadas.
+- Estilo tipo “diario íntimo” para fomentar la reflexión.
+- Solo el usuario puede ver su historial completo.
+
+### 🌍 MoodFeed público
+- Accede a un feed de emociones públicas escritas por otros usuarios.
+- Reacciona con:
+  - 🤝 Apoyo
+  - 👁️ Lo vi
 
 ### 👤 Perfil de usuario
-- Visualización de foto y datos.
-- Edición de nombre, apellido, usuario y año de nacimiento.
-- Botón para ir al historial de emociones.
+- Sección con datos personales y foto de perfil.
+- Posibilidad de editar información y subir imagen.
 
-### 🧠 Registro emocional
-- Formulario para soltar emociones en texto libre.
-- Selección de emojis como representación de estado emocional.
-- Feed tipo red social con las emociones públicas de los demás.
+### 🌐 Perfiles públicos
+- Navegación al perfil público de otros usuarios.
+- Visualización exclusiva de sus emociones **públicas**.
 
-### 🛠️ Herramientas de apoyo (en progreso)
-- Audios de relajación, estadísticas, recursos premium.
+### 🔐 Autenticación segura
+- Registro y login con email y contraseña.
+- Protección de rutas privadas con JWT.
+- Solo los usuarios logueados pueden escribir emociones o ver su historial.
 
----
-
-## 🎨 Diseño visual
-- Inspirado en apps de bienestar (colores lavanda, coral, azul claro).
-- Tipografía suave (Poppins).
-- Interfaz minimalista, limpia y accesible.
+### 🧰 Herramientas de apoyo (en progreso)
+- Sección para incorporar herramientas de salud mental: audios, estadísticas, etc.
 
 ---
 
-## 🚀 Cómo correrlo localmente
+## 🧑‍💻 Tecnologías utilizadas
 
-1. Clona el repositorio:
+### Frontend:
+- React.js
+- React Router
+- Axios
+- CSS Modules + Poppins (Google Fonts)
+
+### Backend:
+- Node.js
+- Express.js
+- Sequelize ORM
+- MySQL
+
+### Autenticación:
+- JWT (JSON Web Tokens)
+- Middlewares personalizados
+
+---
+
+## 🛠️ Instalación y ejecución local
+
 ```bash
+# Clonar el proyecto
 git clone https://github.com/matiascaparotta/Moodio.git
 cd Moodio
-```
 
-2. Instala dependencias:
-```bash
-cd client
-npm install
-cd ../server
-npm install
-```
-
-3. Crea el archivo `.env` en `/server` con:
-```
-PORT=3001
-JWT_SECRET=tu_clave_secreta
-DB_USER=root
-DB_PASSWORD=tu_contraseña
-DB_NAME=moodio_db
-```
-
-4. Inicia el backend y frontend:
-```bash
+# Instalar dependencias del backend
 cd server
-node index.js
-# En otra terminal:
-cd client
+npm install
+
+# Instalar dependencias del frontend
+cd ../client
+npm install
+
+# Ejecutar ambos servidores (usar nodemon y React)
+cd ../server
 npm run dev
-```
 
----
-
-## 🧑‍💻 Autor
-
-**Matías Caparotta** – Desarrollador full stack con background en liderazgo en hospitalidad. En transición profesional hacia el desarrollo de productos tecnológicos con impacto humano.
-
----
-
-## 📸 Capturas de pantalla (opcional)
-
-*Próximamente se pueden agregar para mostrar visualmente el perfil, feed y pantalla de registro.*
-
----
-
-## 🌍 Estado actual del proyecto
-
-Esta rama contiene todos los últimos avances hasta el 2025:
-- ✅ Registro con imagen
-- ✅ Sección de perfil
-- ✅ Diseño visual consistente
-- ✅ Manejo de errores
-- ✅ Subida de imágenes al servidor
-- ✅ Conexión completa entre frontend y backend
-
+cd ../client
+npm start
