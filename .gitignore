@@ -1,0 +1,7 @@
+git add client --force
+git add client --force
+git statusgit status
+
+
+client/node_modules/
+client/build/

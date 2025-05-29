@@ -1,0 +1,16 @@
+.emotion-username {
+    display: inline-block;
+    background-color: #f0f0ff;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    color: #444;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 4px;
+  }
+  
+  .emotion-username:hover {
+    background-color: #dcdcff;
+    color: #222;
+  }

@@ -1,0 +1,36 @@
+.feed-container {
+    margin-top: 30px;
+  }
+  
+  .feed-title {
+    font-size: 1.5rem;
+    color: #5a5a5a;
+    margin-bottom: 15px;
+  }
+  
+  .no-emotions {
+    color: #999;
+  }
+  
+  .emotion-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .emotion-feeling {
+    color: #6c5ce7;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .emotion-message {
+    margin-bottom: 10px;
+  }
+  
+  .emotion-time {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
